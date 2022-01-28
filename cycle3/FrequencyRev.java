@@ -1,16 +1,16 @@
 import java.util.*;
 public class FrequencyRev 
 {
-     public static void main(String args[])
+    public static void main(String args[])
      { 
-      Main fr=new Main();
+      FrequencyRev fr=new FrequencyRev();
       fr.frequency();
       fr.reverse();
      }
   
     void frequency()
     {      
-	    System.out.println("Enter a string value :");
+      System.out.println("Enter a string value :");
       Scanner sc = new Scanner(System.in);
       String str = sc.nextLine();
 
