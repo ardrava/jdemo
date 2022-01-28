@@ -1,26 +1,34 @@
 import java.util.*;
 public class LargestElement
 {
-	public static void main(String args[]) 
-  {
+     public static void main(String args[]) 
+	{
 	    Scanner sc=new Scanner(System.in);
-	    System.out.println("Enter the size of the array");
+	    System.out.println("Enter the size of the matrix");
 	    int size=sc.nextInt();
-	    int a[]=new int [size];
-	    
-		  System.out.println("Enter the elements in the array");
-		  for(int i=0;i<size;i++)
-		   {
-		      a[i]=sc.nextInt();
-		   }
-    
-		  int largest=a[0];
-		  for(int i=0;i<size;i++)
-		    if(largest<a[i])
-		     {
-		         largest=a[i];
-		     }
-		  System.out.println("Elements in the array are:"+Arrays.toString(a));
-		  System.out.println("Largest element"+largest);
+	    int a[][]=new int [size][size];
+	    int i,j;
+            
+	    System.out.println("Enter the elements in the matrix");
+	    for(i=0;i<size;i++)
+	     {
+	       for(j=0;j<size;j++)
+		 {
+		    a[i][j]=sc.nextInt();
+	         }
+	     }
+	     
+	    int largest=a[0][0];
+	    for( i=0;i<size;i++)
+	     {
+		for(j=0;j<size;j++)
+		 {
+	            if(largest<a[i][j])
+	              {
+		          largest=a[i][j];
+		      }
+		 }
+	      }
+	    System.out.println("Largest element"+largest);
 	}
 }
